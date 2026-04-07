@@ -25,16 +25,6 @@ Unlike traditional ping sweeps, UpScanner uses a **paranoid hybrid discovery str
     - **UDP 137** (NetBIOS Name Service)
     - **UDP 1900** (SSDP / UPnP)
 
-- **IoT & Printer Discovery**
-  - Identifies:
-    - Printers
-    - IP cameras
-    - Network appliances
-    - Apple devices
-  - Uses:
-    - **SNMP (UDP 161)**
-    - **mDNS (UDP 5353)**
-
 - **Nessus / Qualys Ready Output**
   - Generates a clean `.txt` file
   - One IP per line
