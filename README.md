@@ -46,6 +46,7 @@ Unlike traditional ping sweeps, UpScanner uses a **paranoid hybrid discovery str
 ```bash
 sudo python3 UpScanner.py -f scope.txt -o live_hosts.txt
 ```
-<img width="1140" height="477" alt="image" src="https://github.com/user-attachments/assets/19c52ce6-3aeb-42d8-9a65-63b2d5c63850" />
+<img width="972" height="573" alt="image" src="https://github.com/user-attachments/assets/8a93d8d8-033a-443f-97be-20c913d459b3" />
+
 
 
