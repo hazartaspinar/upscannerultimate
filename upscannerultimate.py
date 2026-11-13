@@ -1,27 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-UP Scanner v5.0 — Multi-Protocol Live Host Detection (auto-profile)
-Authorized internal network host discovery for pentest engagements.
-
-Zero-tuning goal: just
-    sudo python3 upscanner.py -f subnets.txt -o live.txt
-
-For EACH subnet the scanner asks the OS routing table how that subnet is
-reached and picks a profile automatically:
-
-  LAN     -> subnet is directly connected on a physical NIC (wired/same L2).
-             ARP ping + aggressive timing (-T4). ARP catches even hosts that
-             firewall every IP probe, so this is near-100%.
-  VPN     -> subnet is reached over a tunnel iface (tun/tap/wg/ppp/utun...).
-             No ARP (L3 tunnel), gentle timing (-T3) + packet-rate cap so the
-             tunnel does not saturate and silently drop hosts.
-  ROUTED  -> subnet is reached via a gateway on a physical NIC (routed L3).
-             No ARP across the router; balanced timing.
-
-Single fast pass: ARP (where useful) + ICMP + TCP SYN/ACK + UDP discovery.
-"""
-
 import subprocess
 import sys
 import os
